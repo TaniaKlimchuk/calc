@@ -1,22 +1,23 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef _Calculator_h_
+#define _Calculator_h_
+#include<QWidget>
+#include<QStack>
+#include<QLabel>
+#include<QPushButton>
+#include<QGridLayout>
 
-#include <QMainWindow>
-
-namespace Ui {
-class MainWindow;
-}
-
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
-
-public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
-
+class Calculator:public QWidget{
+Q_OBJECT//макрос,нуженвначалевсехнашихклассов
 private:
-    Ui::MainWindow *ui;
+QLabel*displaystring;
+QStack<QString>stack;
+public:
+Calculator(QWidget*pwgt=0);
+QPushButton*createButton(const QString& str);
+void calculate();
+public slots://Общедоступныеобработчикисобытий
+void slotButtonClicked();
 };
+#endif
 
-#endif // MAINWINDOW_H
+

@@ -12,9 +12,10 @@ TARGET = calc
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    calculator.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    calculator.h
 
 FORMS    += mainwindow.ui
