@@ -14,11 +14,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    calculator.cpp \
     form.cpp
 
 HEADERS  += \
-    calculator.h \
     form.h
 
 FORMS    += \
